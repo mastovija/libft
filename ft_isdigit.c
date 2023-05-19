@@ -1,4 +1,8 @@
 #include "libft.h"
+/*
+* ft_isdigit function determines whether a given character is a digit
+* by checking if it falls within the range of characters representing digits from '0' to '9'.
+*/
 
 int ft_isdigit(int c)
 {

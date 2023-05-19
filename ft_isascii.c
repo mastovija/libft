@@ -1,4 +1,8 @@
 #include "libft.h"
+/*
+* ft_isascii function determines whether a given character is within the ASCII range 
+* by checking if it falls within the range of 0 to 127.
+*/
 
 int ft_isascii (int c)
 {

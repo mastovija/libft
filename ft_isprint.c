@@ -1,4 +1,8 @@
 #include "libft.h"
+/*
+* ft_isprint function determines whether a given character is a printable ASCII character
+* by checking if it falls within the range of ASCII characters from ' ' (space) to ~ (tilde).
+*/
 
 int ft_isprint (int c)
 {

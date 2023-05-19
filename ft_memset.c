@@ -1,4 +1,8 @@
 #include "libft.h"
+/*
+* ft_memset sets each byte in a memory block pointed to by ptr to the specified value for num iterations 
+* and returns the updated pointer.
+*/
 
 void *ft_memset(void *ptr, int value, size_t num)
 {

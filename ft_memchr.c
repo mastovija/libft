@@ -1,4 +1,12 @@
 #include "libft.h"
+/*
+* ft_memchr function searches for a character c within a memory block str of n bytes.
+* It returns a pointer to the first occurrence of the character if found, or NULL if the character is not present in the memory block.
+*
+* In this code, str is a void pointer, which means it can point to any type of data.
+* To perform byte-level operations, it is cast to an unsigned char pointer using (unsigned char *)str.
+* This allows accessing individual bytes in the memory block.
+*/
 
 void    *ft_memchr(const void *str, int c, size_t n)
 {

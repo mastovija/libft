@@ -1,4 +1,12 @@
 #include "libft.h"
+/*
+* ft_strlcat concatenates the source string src to the destination string dst with a specified size limit size.
+* It calculates the available space in the destination buffer and copies characters from the source string to the destination string 
+* while ensuring the limit is not exceeded. It appends a null terminator if there is space available.
+* The function returns the total length of the concatenated string.
+* the size_t size argument specifies the size of the destination buffer and serves as a limit
+* for the concatenation operation, ensuring that it does not exceed the available space and helps prevent buffer overflows.
+*/
 
 size_t ft_strlcat(char *dst, const char *src, size_t size)
 {

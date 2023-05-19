@@ -1,4 +1,9 @@
 #include "libft.h"
+/*
+* ft_memmove function copies a specified number of bytes from the source memory block to the destination memory block,
+* handling potential overlap between the two memory blocks to ensure a safe and correct copy operation.
+* It uses type casting to treat the pointers dest and src as pointers to unsigned char, allowing copying of individual bytes.
+*/
 
 void *ft_memmove(void *dest, const void *src, size_t n)
 {

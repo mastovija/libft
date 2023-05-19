@@ -1,4 +1,9 @@
 #include "libft.h"
+/*
+* ft_atoi function parses a string character by character, skipping leading whitespace,
+* determining the sign, and accumulating the numerical value until a non-digit character is encountered.
+* It then returns the corresponding integer value.
+*/
 
 int ft_atoi(const char *str)
 {
