@@ -16,6 +16,9 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
     src_len = ft_strlen(src);
     i = 0;
 
+    if (!dst && size == 0)
+		return (src_len);
+
     if (size > dest_len)
         available = size - dest_len - 1;
     else

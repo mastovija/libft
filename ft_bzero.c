@@ -18,6 +18,7 @@ void ft_bzero(void *s, size_t n)
         i++;
     }   
 }
+/*
 int main(void)
 {
     char str1[] = "Hello, World!";
@@ -27,3 +28,4 @@ int main(void)
    
     return 0;
 }
+*/

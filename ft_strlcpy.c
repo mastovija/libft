@@ -1,4 +1,10 @@
 #include "libft.h"
+/*
+* The ft_strlcpy function is a string manipulation function that copies a source string (src) to a destination string (dest) 
+* while ensuring that the destination string is properly terminated and does not overflow its allocated space.
+* Provides a safer alternative to 'strcpy' by taking an additional argument 'size' that specifies the size
+* of the destination buffer.
+*/
 
 size_t ft_strlcpy(char *dest, const char *src, size_t size)
 {

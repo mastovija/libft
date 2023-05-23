@@ -22,7 +22,7 @@ void *ft_memcpy(void *dest, const void * src, size_t n)
     }
     return dest;
 }
-
+/*
 int main () 
 {
    const char src[50] = "hello";
@@ -31,3 +31,4 @@ int main ()
    printf("After ft_memcpy dest = %s\n", dest);
    return(0);
 }
+*/

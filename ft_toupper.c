@@ -1,4 +1,7 @@
 #include "libft.h"
+/**
+ * The ft_toupper function provides a way to convert lowercase characters to uppercase characters.
+*/
 
 int ft_toupper(int c)
 {

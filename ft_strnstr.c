@@ -1,4 +1,8 @@
 #include "libft.h"
+/**
+ * The ft_strnstr function searches for the first occurrence of a substring (to_find) within a given string (str) up to a maximum length (len).
+ * It returns a pointer to the first occurrence of the substring within the string, or NULL if the substring is not found.
+*/
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {

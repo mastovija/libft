@@ -1,4 +1,8 @@
 #include "libft.h"
+/**
+ * The ft_strncmp function compares the first n characters of two strings, str1 and str2.
+ * It returns an integer value that indicates the result of the comparison
+*/
 
 int ft_strncmp(const char *str1, const char *str2, size_t n)
 {
