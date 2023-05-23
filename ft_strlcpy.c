@@ -22,7 +22,7 @@ size_t ft_strlcpy(char *dest, const char *src, size_t size)
     }
     return (ft_strlen(src));
 }
-
+/*
 int main(void)
 {
     char dest[10];
@@ -34,3 +34,4 @@ int main(void)
 
     return 0;
 }
+*/
