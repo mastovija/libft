@@ -23,25 +23,20 @@ char *ft_strtrim(char const *s1, char const *set)
     
     if (!s1 || !set)
         return NULL;
-
-    // Trim leading characters
+        
     while (*s1 && is_character_in_set(*s1, set))
         s1++;
-    
-    // Calculate the length of the trimmed string
+
     while (s1[trimmed_length])
         trimmed_length++;
-    
-    // Trim trailing characters
+
     while (trimmed_length > 0 && is_character_in_set(s1[trimmed_length - 1], set))
         trimmed_length--;
 
-    // Allocate memory for the trimmed string
     trimmed_str = (char *)malloc((trimmed_length + 1) * sizeof(char));
     if (!trimmed_str)
         return NULL;
-    
-    // Copy the trimmed string
+
     for (size_t i = 0; i < trimmed_length; i++)
         trimmed_str[i] = s1[i];
     
