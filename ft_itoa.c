@@ -12,7 +12,7 @@ static int get_num_length(int n)
     int length = 0;
 
     // If the number is zero or negative, we add an extra digit for the sign
-    if (n <= 0)
+    if (n < 0)
         length++;
 
     // Count the number of digits in the number
@@ -66,7 +66,7 @@ char *ft_itoa(int n)
 
 int main()
 {
-    int number = -12345;
+    int number = -5210;
 
     // Convert the integer to a string using ft_itoa
     char *str = ft_itoa(number);
