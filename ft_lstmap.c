@@ -11,28 +11,37 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-// The ft_strlen function calculates the length of the string by counting
-// the number of characters until it reaches the null terminator.
-// It assumes that the string passed as the argument s is null-terminated,
-// meaning it ends with a null character ('\0')
-// to indicate the end of the string.
+// ft_lstmap function iterates over a linked list,
+// applies a given function to each element's content,
+// creates a new node with the modified content,
+// and adds it to a new linked list. If any memory allocation fails
+// during this process, it clears the new list and returns NULL.
+// Otherwise, it returns the newly created
+// linked list with the modified elements.
 
-size_t	ft_strlen(const char *s)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t	i;
+	t_list	*new_list;
+	t_list	*new_node;
+	t_list	*current;
+	void	*content;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	new_list = NULL;
+	new_node = NULL;
+	current = lst;
+	if (f == NULL || lst == NULL)
+		return (NULL);
+	while (current)
+	{
+		content = f(current->content);
+		new_node = ft_lstnew(content);
+		if (new_node == NULL)
+		{
+			ft_lstclear(&new_list, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&new_list, new_node);
+		current = current->next;
+	}
+	return (new_list);
 }
-
-/*
-int main (void)
-{
-	char	*s;
-
-	s = "hello";
-	printf ("%zu", ft_strlen(s));
-}
-*/

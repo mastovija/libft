@@ -11,46 +11,58 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-// The ft_lstlast function takes a pointer to the head of a linked list
-// (lst) as input and returns a pointer to the last node of the list.
+// This function adds a new node (new) to the front of a linked list (lst).
+// By updating the next pointers of the nodes, it ensures that the new node is
+// inserted at the beginning of the list and becomes the new first node.
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (lst == NULL)
-		return (NULL);
-	while (lst->next != NULL)
-		lst = lst->next;
-	return (lst);
+	if (lst == NULL || new == NULL)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }
 /*
 int	main(void)
 {
+	t_list	*list;
 	t_list	*node1;
 	t_list	*node2;
 	t_list	*node3;
-	t_list	*lastNode;
+	t_list	*current;
+	t_list	*temp;
 
-	// Create a linked list with three nodes
+	// Create the initial list
+	list = NULL;
+	// Create nodes with some sample content
 	node1 = malloc(sizeof(t_list));
-	node2 = malloc(sizeof(t_list));
-	node3 = malloc(sizeof(t_list));
 	node1->content = "Node 1";
-	node1->next = node2;
+	node1->next = NULL;
+	node2 = malloc(sizeof(t_list));
 	node2->content = "Node 2";
-	node2->next = node3;
+	node2->next = NULL;
+	node3 = malloc(sizeof(t_list));
 	node3->content = "Node 3";
 	node3->next = NULL;
-	// Find the last node of the linked list using ft_lstlast
-	lastNode = ft_lstlast(node1);
-	// Print the content of the last node
-	if (lastNode != NULL)
-		printf("Content of the last node: %s\n", (char *)lastNode->content);
-	else
-		printf("The linked list is empty.\n");
-	// Free the memory allocated for the linked list
-	free(node1);
-	free(node2);
-	free(node3);
+	// Add nodes to the front of the list
+	ft_lstadd_front(&list, node3);
+	ft_lstadd_front(&list, node2);
+	ft_lstadd_front(&list, node1);
+	// Traverse the list and print the content of each node
+	current = list;
+	while (current != NULL)
+	{
+		printf("%s\n", (char *)current->content);
+		current = current->next;
+	}
+	// Free the memory allocated for the nodes
+	current = list;
+	while (current != NULL)
+	{
+		temp = current;
+		current = current->next;
+		free(temp);
+	}
 	return (0);
 }
 */
